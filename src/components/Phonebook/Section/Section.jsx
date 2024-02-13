@@ -1,4 +1,4 @@
-import { PhonebookSection, PhonebookTitle } from './Phonebook.styled';
+import { PhonebookSection, PhonebookTitle } from './Section.styled';
 export const Section = ({ title, children }) => {
   return (
     <PhonebookSection>

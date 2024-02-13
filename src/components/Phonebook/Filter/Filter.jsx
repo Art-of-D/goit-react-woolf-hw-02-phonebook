@@ -1,12 +1,8 @@
-import { PhonebookFilterForm } from './Phonebook.styled';
-export const Filter = ({ filter }) => {
-  const handleFilter = event => {
-    event.preventDefault();
-    filter(event.target.value);
-  };
+import { PhonebookFilter } from './Filter.styled';
 
+export const Filter = ({ filter }) => {
   return (
-    <PhonebookFilterForm onChange={handleFilter}>
+    <PhonebookFilter onChange={e => filter(e.target.value)}>
       <label htmlFor="find-contact">Find contacts by name</label>
       <input
         type="text"
@@ -15,6 +11,6 @@ export const Filter = ({ filter }) => {
         pattern="^[a-zA-Zа-яА-Я]+(['\s\-][a-zA-Zа-яА-Я]+)*$"
         title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
       ></input>
-    </PhonebookFilterForm>
+    </PhonebookFilter>
   );
 };
