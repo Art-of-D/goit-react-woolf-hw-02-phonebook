@@ -1,6 +1,6 @@
 import { Filter } from './Phonebook/Filter/Filter';
 import { Section } from './Phonebook/Section/Section';
-import { ContactForm } from './Phonebook/ContactForm/ContactForm';
+import ContactForm from './Phonebook/ContactForm/ContactForm';
 import { ContactList } from './Phonebook/ContactList/ContactList';
 import { Component } from 'react';
 import { v1 as uuidv1 } from 'uuid';
@@ -12,8 +12,6 @@ class App extends Component {
   };
 
   addContact = ({ name: newName, number }) => {
-    console.log(newName);
-    console.log(this.state.contacts);
     if (
       this.state.contacts.some(
         ({ name }) => name.toLowerCase() === newName.toLowerCase()
